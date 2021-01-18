@@ -7,4 +7,12 @@ cmake ..
 
 make
 
+pipe:
+
 ./pipe
+
+fifo:
+
+./fifo_read &
+
+./fifo_write

@@ -1,6 +1,9 @@
 #include<iostream>
 #include<unistd.h>
 using namespace std;
+//原理：内核管理的无名环形队列
+//特点：单向通信，只能在有亲缘关系的进程间通信
+//常应用在父子进程中
 int main(){
     int pid;
     int fd[2];

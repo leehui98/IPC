@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hli/code/IPC/fifo/fifo_read.cpp
+sys/stat.h
+-
+unistd.h
+-
+fcntl.h
+-
+error.h
+-
+iostream
+-
+

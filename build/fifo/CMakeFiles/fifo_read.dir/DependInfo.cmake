@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hli/code/IPC/pipe.cpp" "/home/hli/code/IPC/build/CMakeFiles/pipe.dir/pipe.cpp.o"
+  "/home/hli/code/IPC/fifo/fifo_read.cpp" "/home/hli/code/IPC/build/fifo/CMakeFiles/fifo_read.dir/fifo_read.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/fifo_write.dir/fifo_write.cpp.o  -o fifo_write 

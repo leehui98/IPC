@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hli/code/IPC/build/CMakeFiles /home/hli/code/IPC/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/hli/code/IPC/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hli/code/IPC/build/CMakeFiles /home/hli/code/IPC/build/pipe/CMakeFiles/progress.marks
+	cd /home/hli/code/IPC/build && $(MAKE) -f CMakeFiles/Makefile2 pipe/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hli/code/IPC/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/hli/code/IPC/build && $(MAKE) -f CMakeFiles/Makefile2 pipe/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,57 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/hli/code/IPC/build && $(MAKE) -f CMakeFiles/Makefile2 pipe/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/hli/code/IPC/build && $(MAKE) -f CMakeFiles/Makefile2 pipe/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hli/code/IPC/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named pipe
+# Convenience name for target.
+pipe/CMakeFiles/pipe.dir/rule:
+	cd /home/hli/code/IPC/build && $(MAKE) -f CMakeFiles/Makefile2 pipe/CMakeFiles/pipe.dir/rule
+.PHONY : pipe/CMakeFiles/pipe.dir/rule
 
-# Build rule for target.
-pipe: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pipe
+# Convenience name for target.
+pipe: pipe/CMakeFiles/pipe.dir/rule
+
 .PHONY : pipe
 
 # fast build rule for target.
 pipe/fast:
-	$(MAKE) -f pipe/CMakeFiles/pipe.dir/build.make pipe/CMakeFiles/pipe.dir/build
+	cd /home/hli/code/IPC/build && $(MAKE) -f pipe/CMakeFiles/pipe.dir/build.make pipe/CMakeFiles/pipe.dir/build
 .PHONY : pipe/fast
 
-#=============================================================================
-# Target rules for targets named fifo_read
+pipe.o: pipe.cpp.o
 
-# Build rule for target.
-fifo_read: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fifo_read
-.PHONY : fifo_read
+.PHONY : pipe.o
 
-# fast build rule for target.
-fifo_read/fast:
-	$(MAKE) -f fifo/CMakeFiles/fifo_read.dir/build.make fifo/CMakeFiles/fifo_read.dir/build
-.PHONY : fifo_read/fast
+# target to build an object file
+pipe.cpp.o:
+	cd /home/hli/code/IPC/build && $(MAKE) -f pipe/CMakeFiles/pipe.dir/build.make pipe/CMakeFiles/pipe.dir/pipe.cpp.o
+.PHONY : pipe.cpp.o
 
-#=============================================================================
-# Target rules for targets named fifo_write
+pipe.i: pipe.cpp.i
 
-# Build rule for target.
-fifo_write: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fifo_write
-.PHONY : fifo_write
+.PHONY : pipe.i
 
-# fast build rule for target.
-fifo_write/fast:
-	$(MAKE) -f fifo/CMakeFiles/fifo_write.dir/build.make fifo/CMakeFiles/fifo_write.dir/build
-.PHONY : fifo_write/fast
+# target to preprocess a source file
+pipe.cpp.i:
+	cd /home/hli/code/IPC/build && $(MAKE) -f pipe/CMakeFiles/pipe.dir/build.make pipe/CMakeFiles/pipe.dir/pipe.cpp.i
+.PHONY : pipe.cpp.i
+
+pipe.s: pipe.cpp.s
+
+.PHONY : pipe.s
+
+# target to generate assembly for a file
+pipe.cpp.s:
+	cd /home/hli/code/IPC/build && $(MAKE) -f pipe/CMakeFiles/pipe.dir/build.make pipe/CMakeFiles/pipe.dir/pipe.cpp.s
+.PHONY : pipe.cpp.s
 
 # Help Target
 help:
@@ -158,8 +161,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... pipe"
-	@echo "... fifo_read"
-	@echo "... fifo_write"
+	@echo "... pipe.o"
+	@echo "... pipe.i"
+	@echo "... pipe.s"
 .PHONY : help
 
 
@@ -171,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hli/code/IPC/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,3 +1,9 @@
 /home/hli/code/IPC/build/CMakeFiles/rebuild_cache.dir
 /home/hli/code/IPC/build/CMakeFiles/edit_cache.dir
-/home/hli/code/IPC/build/CMakeFiles/pipe.dir
+/home/hli/code/IPC/build/pipe/CMakeFiles/rebuild_cache.dir
+/home/hli/code/IPC/build/pipe/CMakeFiles/edit_cache.dir
+/home/hli/code/IPC/build/pipe/CMakeFiles/pipe.dir
+/home/hli/code/IPC/build/fifo/CMakeFiles/edit_cache.dir
+/home/hli/code/IPC/build/fifo/CMakeFiles/rebuild_cache.dir
+/home/hli/code/IPC/build/fifo/CMakeFiles/fifo_read.dir
+/home/hli/code/IPC/build/fifo/CMakeFiles/fifo_write.dir

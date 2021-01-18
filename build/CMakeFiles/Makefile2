@@ -53,46 +53,141 @@ CMAKE_BINARY_DIR = /home/hli/code/IPC/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/pipe.dir/all
+all: pipe/all
+all: fifo/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: pipe/preinstall
+preinstall: fifo/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/pipe.dir/clean
+clean: pipe/clean
+clean: fifo/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/pipe.dir
+# Directory level rules for directory fifo
+
+# Recursive "all" directory target.
+fifo/all: fifo/CMakeFiles/fifo_read.dir/all
+fifo/all: fifo/CMakeFiles/fifo_write.dir/all
+
+.PHONY : fifo/all
+
+# Recursive "preinstall" directory target.
+fifo/preinstall:
+
+.PHONY : fifo/preinstall
+
+# Recursive "clean" directory target.
+fifo/clean: fifo/CMakeFiles/fifo_read.dir/clean
+fifo/clean: fifo/CMakeFiles/fifo_write.dir/clean
+
+.PHONY : fifo/clean
+
+#=============================================================================
+# Directory level rules for directory pipe
+
+# Recursive "all" directory target.
+pipe/all: pipe/CMakeFiles/pipe.dir/all
+
+.PHONY : pipe/all
+
+# Recursive "preinstall" directory target.
+pipe/preinstall:
+
+.PHONY : pipe/preinstall
+
+# Recursive "clean" directory target.
+pipe/clean: pipe/CMakeFiles/pipe.dir/clean
+
+.PHONY : pipe/clean
+
+#=============================================================================
+# Target rules for target pipe/CMakeFiles/pipe.dir
 
 # All Build rule for target.
-CMakeFiles/pipe.dir/all:
-	$(MAKE) -f CMakeFiles/pipe.dir/build.make CMakeFiles/pipe.dir/depend
-	$(MAKE) -f CMakeFiles/pipe.dir/build.make CMakeFiles/pipe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hli/code/IPC/build/CMakeFiles --progress-num=1,2 "Built target pipe"
-.PHONY : CMakeFiles/pipe.dir/all
+pipe/CMakeFiles/pipe.dir/all:
+	$(MAKE) -f pipe/CMakeFiles/pipe.dir/build.make pipe/CMakeFiles/pipe.dir/depend
+	$(MAKE) -f pipe/CMakeFiles/pipe.dir/build.make pipe/CMakeFiles/pipe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hli/code/IPC/build/CMakeFiles --progress-num=5,6 "Built target pipe"
+.PHONY : pipe/CMakeFiles/pipe.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/pipe.dir/rule: cmake_check_build_system
+pipe/CMakeFiles/pipe.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hli/code/IPC/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pipe.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 pipe/CMakeFiles/pipe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hli/code/IPC/build/CMakeFiles 0
-.PHONY : CMakeFiles/pipe.dir/rule
+.PHONY : pipe/CMakeFiles/pipe.dir/rule
 
 # Convenience name for target.
-pipe: CMakeFiles/pipe.dir/rule
+pipe: pipe/CMakeFiles/pipe.dir/rule
 
 .PHONY : pipe
 
 # clean rule for target.
-CMakeFiles/pipe.dir/clean:
-	$(MAKE) -f CMakeFiles/pipe.dir/build.make CMakeFiles/pipe.dir/clean
-.PHONY : CMakeFiles/pipe.dir/clean
+pipe/CMakeFiles/pipe.dir/clean:
+	$(MAKE) -f pipe/CMakeFiles/pipe.dir/build.make pipe/CMakeFiles/pipe.dir/clean
+.PHONY : pipe/CMakeFiles/pipe.dir/clean
+
+#=============================================================================
+# Target rules for target fifo/CMakeFiles/fifo_read.dir
+
+# All Build rule for target.
+fifo/CMakeFiles/fifo_read.dir/all:
+	$(MAKE) -f fifo/CMakeFiles/fifo_read.dir/build.make fifo/CMakeFiles/fifo_read.dir/depend
+	$(MAKE) -f fifo/CMakeFiles/fifo_read.dir/build.make fifo/CMakeFiles/fifo_read.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hli/code/IPC/build/CMakeFiles --progress-num=1,2 "Built target fifo_read"
+.PHONY : fifo/CMakeFiles/fifo_read.dir/all
+
+# Build rule for subdir invocation for target.
+fifo/CMakeFiles/fifo_read.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hli/code/IPC/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 fifo/CMakeFiles/fifo_read.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hli/code/IPC/build/CMakeFiles 0
+.PHONY : fifo/CMakeFiles/fifo_read.dir/rule
+
+# Convenience name for target.
+fifo_read: fifo/CMakeFiles/fifo_read.dir/rule
+
+.PHONY : fifo_read
+
+# clean rule for target.
+fifo/CMakeFiles/fifo_read.dir/clean:
+	$(MAKE) -f fifo/CMakeFiles/fifo_read.dir/build.make fifo/CMakeFiles/fifo_read.dir/clean
+.PHONY : fifo/CMakeFiles/fifo_read.dir/clean
+
+#=============================================================================
+# Target rules for target fifo/CMakeFiles/fifo_write.dir
+
+# All Build rule for target.
+fifo/CMakeFiles/fifo_write.dir/all:
+	$(MAKE) -f fifo/CMakeFiles/fifo_write.dir/build.make fifo/CMakeFiles/fifo_write.dir/depend
+	$(MAKE) -f fifo/CMakeFiles/fifo_write.dir/build.make fifo/CMakeFiles/fifo_write.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hli/code/IPC/build/CMakeFiles --progress-num=3,4 "Built target fifo_write"
+.PHONY : fifo/CMakeFiles/fifo_write.dir/all
+
+# Build rule for subdir invocation for target.
+fifo/CMakeFiles/fifo_write.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hli/code/IPC/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 fifo/CMakeFiles/fifo_write.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hli/code/IPC/build/CMakeFiles 0
+.PHONY : fifo/CMakeFiles/fifo_write.dir/rule
+
+# Convenience name for target.
+fifo_write: fifo/CMakeFiles/fifo_write.dir/rule
+
+.PHONY : fifo_write
+
+# clean rule for target.
+fifo/CMakeFiles/fifo_write.dir/clean:
+	$(MAKE) -f fifo/CMakeFiles/fifo_write.dir/build.make fifo/CMakeFiles/fifo_write.dir/clean
+.PHONY : fifo/CMakeFiles/fifo_write.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
